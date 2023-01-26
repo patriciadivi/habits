@@ -1,6 +1,6 @@
 <div align="center">
-# 👷🏾🧱 EM CONSTRUÇÃO 👷🛠️
+<h1>👷🏾🧱 EM CONSTRUÇÃO 👷🛠️</h1>
 
-## Projetos habits
+<h2>Projetos habits</h2>
 Projetos de controle de Tarefas.
 </div>

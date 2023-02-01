@@ -1,7 +1,14 @@
 import { Habit } from "./components/Habit";
 
 function App() {
-  return <Habit />;
+  return (
+    <div>
+      <Habit completed={3} />
+      <Habit completed={10} />
+      <Habit completed={20} />
+      <Habit completed={30} />
+    </div>
+  );
 }
 
 export default App;

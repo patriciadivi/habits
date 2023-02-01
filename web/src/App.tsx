@@ -1,5 +1,7 @@
+import { Habit } from "./components/Habit";
+
 function App() {
-  return <h1>Hello Word</h1>;
+  return <Habit />;
 }
 
 export default App;

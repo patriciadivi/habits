@@ -1,3 +1,8 @@
 {
-  "conventionalCommits.scopes": ["dependências", "Desenvolvimento", "Config"]
+  "conventionalCommits.scopes": [
+    "dependências",
+    "Desenvolvimento",
+    "Config",
+    "Bugs"
+  ]
 }

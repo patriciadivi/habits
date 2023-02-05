@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.tsx", "./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        backgroud: "#09090A",
+      },
+    },
   },
   plugins: [],
 };

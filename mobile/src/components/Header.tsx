@@ -20,3 +20,5 @@ export function Header() {
     </View>
   );
 }
+
+// componete Header Criado

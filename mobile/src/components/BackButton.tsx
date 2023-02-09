@@ -1,9 +1,13 @@
-import { View } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Feather } from '@expo/vector-icons';
 
 export function BackButton() {
-    return (
-        <View>
-            
-        </View>
-    )
+  return (
+    <TouchableOpacity 
+      activeOpacity={0.7}
+    >
+      <Feather 
+      />
+    </TouchableOpacity>
+  )
 }

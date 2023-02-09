@@ -1,5 +1,7 @@
-import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { ScrollView, Text, TextInput, View } from "react-native";
+
 import { BackButton } from "../components/BackButton";
+import { Checkbox } from "../components/CheckBox";
 
 export function New() {
   return (
@@ -9,6 +11,20 @@ export function New() {
         contentContainerStyle={{ paddingBottom: 100 }}
       >
         <BackButton />
+
+        <Text className="mt-6 text-white font-extrabold text-3xl">
+          Criar hábito
+        </Text>
+
+        <Text className="mt-6 text-white font-semibold text-base">
+          Qual seu comprometimento?
+        </Text>
+
+        <TextInput 
+          className="h-12 pl-4 rounded-lg mt-3 bg-zinc-900 text-white border-2 border-zinc-800 focus:border-green-600"
+        />
+
+        <Checkbox />
 
       </ScrollView>
     </View>

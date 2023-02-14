@@ -8,6 +8,7 @@ import { Header } from "../components/Header";
 import { HabitDay, DAY_SIZE } from "../components/HabitDay";
 import { useEffect, useState } from "react";
 import { Loading } from "../components/Loading";
+import dayjs from "dayjs";
 
 const weekDays = ["D", "S", "T", "Q", "Q", "S", "S"];
 const datesFromYearStart = generateRangeDatesFromYearStart();
@@ -75,12 +76,23 @@ export function Home() {
         contentContainerStyle={{ paddingBottom: 100 }}
       >
         <View className="flex-row flex-wrap">
-          {datesFromYearStart.map((date) => (
-            <HabitDay 
-              key={date.toISOString()} 
-              onPress={() => navigate('habit', { date: date.toISOString() })}
-            />
-          ))}
+          {
+            datesFromYearStart.map((date) => {
+              const dayWithHabits = summary?.find((day) => {
+                return dayjs(date).isSame(day.date, 'day')
+              })
+
+              return (
+                <HabitDay 
+                  key={date.toISOString()}
+                  date={date}
+                  amountOfHabits={dayWithHabits?.amount}
+                  amountCompleted={dayWithHabits?.completed}
+                  onPress={() => navigate('habit', { date: date.toISOString() })}
+                />
+              )
+            })
+          }
 
           {amountOfDaysToFill > 0 &&
             Array.from({ length: amountOfDaysToFill }).map((_, index) => (

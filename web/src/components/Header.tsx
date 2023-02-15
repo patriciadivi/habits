@@ -11,10 +11,10 @@ export function Header() {
         alt="logo de habits, quadrados superiores em varios tons de roxo e, texto habits abaixo do quadrados no tom de roxo escuro"
       />
 
-<Dialog.Root>
+      <Dialog.Root>
         <Dialog.Trigger
           type="button"
-          className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300"
+          className="border border-violet-500 font-semibold rounded-lg px-6 py-4 flex items-center gap-3 hover:border-violet-300 transition-colors"
         >
           <Plus size={20} className="text-violet-500" />
           Novo hábito

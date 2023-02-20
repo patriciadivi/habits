@@ -9,6 +9,7 @@ import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/ProgressBar";
 import { Loading } from "../components/Loading";
 import { Checkbox } from "../components/Checkbox";
+import { generateProgressPercentage } from "../utils/generate-progress-percentage";
 
 interface Params {
   date: string;
@@ -31,14 +32,19 @@ export function Habit() {
   const { date } = route.params as Params;
 
   const parsedDate = dayjs(date);
+  const isDateInPast = parsedDate.endOf('day').isBefore(new Date());
   const dayOfWeek = parsedDate.format('dddd');
   const dayAndMonth = parsedDate.format('DD/MM');
+
+  const habitsProgress = dayInfo?.possibleHabits.length 
+  ? generateProgressPercentage(dayInfo.possibleHabits.length, completedHabits.length) 
+  : 0
 
   async function fatchHabits() {
     try {
       setLoading(true)
       const response = await api.get('/day', { params: { date } });
-      console.log(response.data)
+      // console.log(response.data)
       setDayInfo(response.data)
       setCompletedHabits(response.data.completedHabits)
       
@@ -47,6 +53,21 @@ export function Habit() {
       Alert.alert('ops', 'Não foi possível carregar as informações dos hábitos')
     } finally {
       setLoading(false)
+    }
+  }
+
+  async function handleToggleHabits(habitId: string) {
+    try {
+      await api.patch(`/habits/${habitId}/toggle`);
+
+      if (completedHabits?.includes(habitId)) {
+        setCompletedHabits(prevState => prevState.filter(habit => habit !== habitId));
+      } else {
+        setCompletedHabits(prevState => [...prevState, habitId]);
+      }
+    } catch (error) {
+      console.log(error)
+      Alert.alert('Ops', 'Não foi possível atualizar o status do hábito.')
     }
   }
 
@@ -78,7 +99,7 @@ export function Habit() {
           {dayAndMonth}
         </Text>
 
-        <ProgressBar progress={30} />
+        <ProgressBar progress={habitsProgress} />
 
         <View className="mt-6">
 
@@ -90,6 +111,8 @@ export function Habit() {
                     key={habit.id}
                     title={habit.title}
                     checked={completedHabits?.includes(habit.id)}
+                    onPress={() => handleToggleHabits(habit.id)}
+                    disabled={isDateInPast}
                   />
                 )
               })

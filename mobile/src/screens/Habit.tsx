@@ -4,12 +4,13 @@ import { ScrollView, View, Text, Alert} from "react-native";
 import dayjs from "dayjs";
 
 import { api } from "../lib/axios";
+import { generateProgressPercentage } from "../utils/generate-progress-percentage";
 
 import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/ProgressBar";
-import { Loading } from "../components/Loading";
 import { Checkbox } from "../components/Checkbox";
-import { generateProgressPercentage } from "../utils/generate-progress-percentage";
+import { Loading } from "../components/Loading";
+import { HabitsEmpty } from "../components/HabitsEmpty";
 
 interface Params {
   date: string;
@@ -45,7 +46,7 @@ export function Habit() {
       setLoading(true)
       const response = await api.get('/day', { params: { date } });
       // console.log(response.data)
-      setDayInfo(response.data)
+      // setDayInfo(response.data)
       setCompletedHabits(response.data.completedHabits)
       
     } catch (error) {
@@ -99,12 +100,12 @@ export function Habit() {
           {dayAndMonth}
         </Text>
 
-        <ProgressBar progress={habitsProgress} />
+        <ProgressBar progress={habitsProgress } />
 
         <View className="mt-6">
 
           {
-            dayInfo?.possibleHabits &&
+            dayInfo?.possibleHabits ?
               dayInfo?.possibleHabits.map((habit) => {
                 return (
                   <Checkbox
@@ -116,6 +117,7 @@ export function Habit() {
                   />
                 )
               })
+              : < HabitsEmpty />
           }
 
         </View>

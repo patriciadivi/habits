@@ -1,0 +1,159 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-03-09T23:00:24.299Z",
+  "__export_source": "insomnia.desktop.app:v2022.7.5",
+  "resources": [
+    {
+      "_id": "req_a3f0a458825846da94ea11931a589433",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1677303092916,
+      "created": 1675812107095,
+      "url": "http://localhost:3333/habits",
+      "name": "POST Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"ESTUDAR ingles\",\n\t\"weekDays\": [0, 6]\n}"
+      },
+      "parameters": [],
+      "headers": [{ "name": "Content-Type", "value": "application/json" }],
+      "authentication": {},
+      "metaSortKey": -1675811740390,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "parentId": null,
+      "modified": 1678402669142,
+      "created": 1675811781977,
+      "name": "Habits",
+      "description": "Projetos de controle de tarefas. Projeto se baseia na criação de hábitos a\nserem compridos diariamente, com o intuito de melhorar a vida do usuário\nfinal em seus objetivos e metas.",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_ce8326c7ec5f459e92bd19925b3f2f06",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1677556514480,
+      "created": 1675811796546,
+      "url": "http://localhost:3333/day",
+      "name": "GET Day",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_0e9c8435bf944455970da6a10df5ec6f",
+          "name": "date",
+          "value": "2023-02-28T23:57:00.000Z",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1675811740340,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8e7bd017442f428c8f58fc92d6f43224",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1677552396322,
+      "created": 1675813382562,
+      "url": "http://localhost:3333/summary",
+      "name": "GET Summary",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_0e9c8435bf944455970da6a10df5ec6f",
+          "name": "date",
+          "value": "2023-02-28T03:00:00.000Z",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1675811698235.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5d8c55e33b7c4d88b52c335d04585804",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1677305650751,
+      "created": 1675813051401,
+      "url": "http://localhost:3333/habits/fef523c8-6b77-47aa-a99f-786a978e0a17/toggle",
+      "name": "Toggle Habit",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1675811656131,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_5ff001368a68042c135e56752959938a2e89f1b4",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1675811781984,
+      "created": 1675811781984,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1675811781984,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_5ff001368a68042c135e56752959938a2e89f1b4",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1675811781987,
+      "created": 1675811781987,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_a5d019efb13549dfb2ffdd55e36274b8",
+      "parentId": "wrk_d934f337c1b84351a49fd760f068ccbd",
+      "modified": 1675811781978,
+      "created": 1675811781978,
+      "fileName": "Habits",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}

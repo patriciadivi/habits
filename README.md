@@ -4,13 +4,12 @@
   <img src="https://gist.githubusercontent.com/patriciadivi/003fab0e7834070b1f225aae4645d776/raw/a3dacca628b16eb8207a60bceb3c9e8178c30cf6/habitsCompleted.svg" />
   
   <h4 align="center"> 
-	🚧  Habits ♻️ Concluído 🚀 🚧
+	🚧  Habits ♻️ Em Desenvolvimento 🚀 🚧
   </h4>
   <p align="center">
-   <a href="#-sobre-o-projeto">Sobre</a> •
+   • <a href="#-sobre-o-projeto">Sobre o projeto</a> •
    <a href="#-projeto-em-sua-maquina">Projeto em sua maquina</a> •
    <a href="#-como-executar-o-projeto">Como executar o projeto</a> •
-   <a href="#-layout">Layout</a> •
    <a href="#-tecnologias">Tecnologias</a> •
   </p>
  

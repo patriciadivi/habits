@@ -18,8 +18,8 @@
 
   ## 💻 Sobre o projeto
   <h3>
-    Projeto de controle de tarefas. Projeto se baseia na criação de hábitos a <br>serem compridos diariamente,
-    com o intuito de melhorar<br> a vida do usuário final em seus objetivos e metas.
+    O projeto tem a função de organizar e controlar os hábitos diários criados pelos <br>
+    usuários para auxiliar no resultado final de seus objetivos.
   </h3>
  
   </br>

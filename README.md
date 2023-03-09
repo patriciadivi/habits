@@ -18,7 +18,7 @@
 
   ## 💻 Sobre o projeto
   <h3>
-    Projetos de controle de Tarefas. Projeto se baseá na criação de hábitos a <br>serem compridos diariamente,
+    Projeto de controle de tarefas. Projeto se baseia na criação de hábitos a <br>serem compridos diariamente,
     com o intuito de melhorar<br> a vida do usuário final em seus objetivos e metas.
   </h3>
  

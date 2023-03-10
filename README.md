@@ -48,7 +48,7 @@
 	<br />
 	
 ```Bash
-> 2 - Criando uma Repositorio no seu GitHub
+> 2 - Criando uma repositório no seu GitHub
 		# Abra seu GitHub
 		- Crie um `novo repositório`.
 ```
@@ -155,7 +155,7 @@
   # O servidor inciará na porta:3333 - acesse http://localhost:3333 
 
   ```
-
+<h4>Caso queira acessar a API do projeto click no botão abaixo</h4>
 <a href="https://insomnia.rest/run/?label=Habits%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fpatriciadivi%2Fhabits%2Fmain%2Fserver%2FInsomniaAPI_habits.json" target="_blank">
   <img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia">
 </a>
